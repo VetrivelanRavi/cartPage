@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Apple",
+    "category": "Fruits",
+    "price": 2.5,
+    "image": "https://img.freepik.com/free-psd/red-fresh-apple-isolated-con-transparent-background_125540-5172.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712448000&semt=sph"
+  },
+  {
+    "name": "Banana",
+    "category": "Fruits",
+    "price": 1.0,
+    "image": "https://media.istockphoto.com/id/173242750/photo/banana-bunch.jpg?s=612x612&w=0&k=20&c=MAc8AXVz5KxwWeEmh75WwH6j_HouRczBFAhulLAtRUU="
+  },
+  {
+    "name": "Milk",
+    "category": "Dairy",
+    "price": 3.0,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Glass_of_milk.jpg/2560px-Glass_of_milk.jpg"
+  },
+  {
+    "name": "Bread",
+    "category": "Bakery",
+    "price": 2.0,
+    "image": "https://thumbs.dreamstime.com/b/bread-cut-14027607.jpg"
+  },
+  {
+    "name": "Eggs",
+    "category": "Dairy",
+    "price": 2.5,
+    "image": "https://img.freepik.com/premium-photo/pyramid-brown-eggs-isolated-white_221436-209.jpg"
+  },
+  {
+    "name": "Tomato",
+    "category": "Vegetables",
+    "price": 1.2,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/1231px-Tomato_je.jpg"
+  }
+]
