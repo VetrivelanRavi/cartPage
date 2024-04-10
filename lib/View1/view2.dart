@@ -30,39 +30,44 @@ class _CartPageState extends State<CartPage> {
             title: Text('Cart Page'),
             centerTitle: true,
           ),
-          body: ListView.builder(
-            itemCount: Cartadd.cartList.length,
-            itemBuilder: (context, index) {
-              final products = Cartadd.cartList[index];
-              return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  child: Container(
-                    height: 70,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Image.network(
-                          products.image.toString(),
-                          height: 50,
+          body: Cartadd.cartList.length == 0
+              ? Center(
+                  child: Text(
+                  "Your Cart Is Empty",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                ))
+              : ListView.builder(
+                  itemCount: Cartadd.cartList.length,
+                  itemBuilder: (context, index) {
+                    final products = Cartadd.cartList[index];
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Card(
+                        child: Container(
+                          height: 70,
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Image.network(
+                                products.image.toString(),
+                                height: 50,
+                              ),
+                              Text(products.name.toString()),
+                              Text(products.price.toString()),
+                              TextButton.icon(
+                                  onPressed: () {
+                                    Cartadd.addItemToCart(products);
+                                  },
+                                  icon: Icon(Icons.delete_outline),
+                                  label: Text('Delete'))
+                            ],
+                          ),
                         ),
-                        Text(products.name.toString()),
-                        Text(products.price.toString()),
-                        
-                        TextButton.icon(
-                            onPressed: () {
-                              Cartadd.addItemToCart(products);
-                            },
-                            icon: Icon(Icons.delete_outline),
-                            label: Text('Delete'))
-                      ],
-                    ),
-                  ),
+                      ),
+                    );
+                  },
                 ),
-              );
-            },
-          ),
         ),
       ),
     );

@@ -26,8 +26,10 @@ class ViewModel extends ChangeNotifier {
   void addItemToCart(Model cartAction) {
     if (cartList.contains(cartAction)) {
       cartList.remove(cartAction);
+      notifyListeners();
     } else {
       cartList.add(cartAction);
+      notifyListeners();
     }
     print(cartList);
     notifyListeners();
